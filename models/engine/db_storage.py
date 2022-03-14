@@ -11,8 +11,8 @@ from sqlalchemy.orm import sessionmaker
 user = getenv('WED_MYSQL_USER')
 pssw = getenv('WED_MYSQL_PWD')
 host = getenv('WED_MYSQL_HOST')
-db = getenv('HBNB_MYSQL_DB')
-sql = 'mysql+mysqldb://{}:{}@{}:3306/{}'
+db = getenv('WED_MYSQL_DB')
+sql = 'mysql+mysqldb://{}:{}@{}:3306/{}'.format(user, pssw, host, db)
 
 classes = {"User": User}
 
