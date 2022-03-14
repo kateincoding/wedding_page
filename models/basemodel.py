@@ -27,7 +27,7 @@ class Basemodel:
             if "created_at" not in kwargs:
                 self.created_at = datetime.now()
             if "upt_at" not in kwargs:
-#    Updated: 2022/03/13 22:44:31 by ksoto            ###   ########.fr        #
+                self.upt_at = datetime.now()
 
 
     def __str__(self):

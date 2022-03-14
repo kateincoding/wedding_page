@@ -4,7 +4,8 @@ from sqlalchemy import create_engine
 from os import getenv
 from sqlalchemy import MetaData
 from logging import info
-
+from models.basemodel import Basemodel, Base
+from models.user import User
 from sqlalchemy.orm import scoped_session
 from sqlalchemy.orm import sessionmaker
 
@@ -12,7 +13,7 @@ user = getenv('WED_MYSQL_USER')
 pssw = getenv('WED_MYSQL_PWD')
 host = getenv('WED_MYSQL_HOST')
 db = getenv('WED_MYSQL_DB')
-sql = 'mysql+mysqldb://{}:{}@{}:3306/{}'.format(user, pssw, host, db)
+sql = 'mysql+mysqlconnector://{}:{}@{}:3306/{}'.format(user, pssw, host, db)
 
 classes = {"User": User}
 
